@@ -1,37 +1,36 @@
 <nav class="navbar navbar-expand navbar-dark blue-gradient">
 
-  <a class="navbar-brand" href="/"><i class="far fa-sticky-note mr-1"></i>memo</a>
+  <a class="navbar-brand" href="/"><i class="far fa-sticky-note mr-1"></i>Memo</a>
 
   <ul class="navbar-nav ml-auto">
 
-    @guest
+    @guest {{--この行を追加--}}
     <li class="nav-item">
-    <a class="nav-link" href="{{ route('register') }}">ユーザー登録</a>
+      <a class="nav-link" href="{{ route('register') }}">ユーザー登録</a> {{--この行を変更--}}
     </li>
-    @endguest
+    @endguest {{--この行を追加--}}
 
-    @guest
+    @guest {{--この行を追加--}}
     <li class="nav-item">
-    <a class="nav-link" href="">ログイン</a>
+      <a class="nav-link" href="">ログイン</a>
     </li>
-    @endguest
+    @endguest {{--この行を追加--}}
 
-    @auth
+    @auth {{--この行を追加--}}
     <li class="nav-item">
       <a class="nav-link" href=""><i class="fas fa-pen mr-1"></i>投稿する</a>
     </li>
-    @endauth
+    @endauth {{--この行を追加--}}
 
+    @auth {{--この行を追加--}}
     <!-- Dropdown -->
-    @auth
     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-         aria-haspopup="true" aria-expanded="false">
+      <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="false">
         <i class="fas fa-user-circle"></i>
       </a>
       <div class="dropdown-menu dropdown-menu-right dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-        <button class="dropdown-item" type="button"
-                onclick="location.href=''">
+        <button class="dropdown-item" type="button" onclick="location.href=''">
           マイページ
         </button>
         <div class="dropdown-divider"></div>
@@ -40,11 +39,11 @@
         </button>
       </div>
     </li>
-  <form id="logout-button" method="POST" action="{{ route(logout) }}">
-      @csrf
+    <form id="logout-button" method="POST" action="{{ route('logout') }}"> {{--この行を編集--}}
+      @csrf {{--この行を追加--}}
     </form>
-    @endauth
     <!-- Dropdown -->
+    @endauth {{--この行を追加--}}
 
   </ul>
 
