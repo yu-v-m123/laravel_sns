@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Article;
 use Illuminate\Http\Request;
+use App\Http\Requests\ArticleRequest;
 
 class ArticleController extends Controller
 {
@@ -15,31 +16,11 @@ class ArticleController extends Controller
 
     public function create()
     {
-
+        return view('articles.create');
     }
 
-    public function store()
+    public function store(ArticleRequest $request, Article $article)
     {
-
-    }
-
-    public function show()
-    {
-
-    }
-
-    public function edit()
-    {
-
-    }
-
-    public function update()
-    {
-
-    }
-
-    public function destroy()
-    {
-
+        
     }
 }
