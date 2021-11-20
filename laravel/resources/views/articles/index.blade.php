@@ -11,6 +11,7 @@
       <i class="fas fa-user-circle fa-3x mr-1"></i>
       <div>
         <div class="font-weight-bold">
+          あああああああああああああ
           {{ $article->user->name }}
         </div>
         <div class="font-weight-lighter">
